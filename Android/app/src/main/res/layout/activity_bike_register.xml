@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BikeRegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <ImageView
+            android:id="@+id/bikeImgView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/border" />
+
+        <Button
+            android:id="@+id/buttonRegisterBikeImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="사진등록"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="모델명: "
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/editTextBikeModel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="ex) 프로스트5 카본 자전거" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="종류: "
+                android:textSize="25dp" />
+
+            <Spinner
+                android:id="@+id/spinnerBikeType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/bikeTypeArray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="추가정보: "
+                android:scrollHorizontally="false"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/editTextBikeInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="ex) 카본 프레임이 적용되어 있는 모델입니다."
+                android:scrollHorizontally="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="등록위치: "
+                android:scrollHorizontally="false"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/editTextBikeLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollHorizontally="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonRegisterMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="검색"
+                android:textSize="25dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="희망요금"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/editTextBikeCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="1000"
+                android:inputType="number"
+                android:text="1000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="원"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/buttonCostUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/buttonCostDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="-" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="스마트락 고유번호: "
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/editTextBikeLockId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="A1B2C3D4" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonRegisterBike"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="등록"
+            android:textSize="25dp"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
